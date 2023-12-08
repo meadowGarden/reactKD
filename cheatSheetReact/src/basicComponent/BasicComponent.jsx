@@ -1,21 +1,9 @@
-import PropTypes from "prop-types";
-
-const BasicComponent = ({ varSample }) => {
+const BasicComponent = () => {
   return (
     <>
-      <h1>{varSample}</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        placeat doloribus distinctio nam. Odit, porro facere. Sint, voluptatibus
-        deleniti aliquid nisi labore vel expedita deserunt voluptatum. Minima
-        officiis voluptates quibusdam?
-      </p>
+      <h3>sample text, no props</h3>
     </>
   );
-};
-
-BasicComponent.propTypes = {
-  varSample: PropTypes.string.isRequired,
 };
 
 export default BasicComponent;

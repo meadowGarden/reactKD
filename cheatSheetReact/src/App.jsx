@@ -13,54 +13,47 @@ import Posts_API from "./fetch/Posts_API";
 import Products from "./fetch/Products";
 //npm i --save bootstrap
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { Route, Routes } from "react-router-dom";
+import Homepage from "./site/Homepage";
+import NavbarMK1 from "./site/NavbarMK1"
+import PageNotFound from "./site/PageNotFound";
 
 function App() {
   return (
     <>
+      <NavbarMK1 />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+
+        <Route path="/basiccomponent" element={<BasicComponent />} />
+
+        <Route
+          path="/sample01"
+          element={<Sample01 varSample="sample of variable" />}
+        />
+        <Route path="/sample02" element={<Sample02 />} />
+        <Route path="/sample03" element={<Sample03 />} />
+
+        <Route path="/lesstext" element={<LessText />} />
+        <Route path="/stepcounter" element={<StepCounter />} />
+        <Route path="/myteam" element={<MyTeam />} />
+
+        <Route path="/posts_static" element={<Posts_static />} />
+        <Route path="/posts_api" element={<Posts_API />} />
+        <Route path="/products_from_class" element={<Products />} />
+
+        <Route path="/*" element={<PageNotFound/>} />
+      </Routes>
+
       {/* <ThemeProvider>
         <ThemeSwitcher />
-      </ThemeProvider> */}
+      </ThemeProvider>
 
       <ThemeProvider>
         <ContainerComponent>
           <ThemeSwitcher />
         </ContainerComponent>
-      </ThemeProvider>
-
-      <div>
-        <h1>basic component</h1>
-        <BasicComponent />
-        <hr />
-        <h1>components with a flavour</h1>
-        <Sample01 varSample="sample of variable" />
-        <br />
-        <Sample02 />
-        <br />
-        <Sample03 />
-        <br />
-        <hr />
-        <h1>hooks</h1>
-        <LessText />
-        <br />
-        <StepCounter />
-        <br />
-        <MyTeam />
-        <hr />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <hr />
-        <h1>fetch, events</h1>
-        <Posts_static />
-        <br />
-        <Posts_API />
-        <br />
-        <Products />
-        <br />
-        <hr />
-      </div>
+      </ThemeProvider> */}
     </>
   );
 }

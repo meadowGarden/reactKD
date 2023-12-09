@@ -1,6 +1,7 @@
 // import axios from "axios";
 // import { useEffect } from "react";
-
+// npm install react-bootstrap bootstrap
+// npm i react-router-dom
 // npm i axios
 
 // const getPostData = () => {
@@ -41,4 +42,3 @@
 
 
 
-// npm install react-bootstrap bootstrap

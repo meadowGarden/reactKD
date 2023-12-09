@@ -17,6 +17,7 @@ import { Route, Routes } from "react-router-dom";
 import Homepage from "./site/Homepage";
 import NavbarMK1 from "./site/NavbarMK1"
 import PageNotFound from "./site/PageNotFound";
+import IceCreamStand from "./nd_iceCream/IceCreamStand";
 
 function App() {
   return (
@@ -42,7 +43,9 @@ function App() {
         <Route path="/posts_api" element={<Posts_API />} />
         <Route path="/products_from_class" element={<Products />} />
 
-        <Route path="/*" element={<PageNotFound/>} />
+        <Route path="/icecream" element={<IceCreamStand />} />
+
+        <Route path="/*" element={<PageNotFound />} />
       </Routes>
 
       {/* <ThemeProvider>

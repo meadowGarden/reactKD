@@ -9,7 +9,7 @@ const PeopleToAdd = ({ list, setList }) => {
   return people.map((person) => (
     <button
       onClick={() => addPerson(person)}
-      //   onClick={() => console.log(person.name)}
+      // onClick={() => console.log(person.name)}
       key={person.Id}
       style={{ margin: "10px" }}
     >

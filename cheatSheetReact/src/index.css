@@ -35,3 +35,9 @@
 .darkMainContainer {
   background-color: darkslategrey;
 }
+
+
+.sizeBox {
+  box-sizing: border-box;
+  gap: "1rem",
+}

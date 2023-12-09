@@ -8,6 +8,11 @@ import LessText from "./hooks/LessText";
 import MyTeam from "./hooks/MyTeam";
 import StepCounter from "./hooks/StepCounter";
 import ContainerComponent from "./hooks/changeTheme/ContainerComponent";
+import Posts_static from "./fetch/Posts_static";
+import Posts_API from "./fetch/Posts_API";
+import Products from "./fetch/Products";
+//npm i --save bootstrap
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -40,6 +45,21 @@ function App() {
         <StepCounter />
         <br />
         <MyTeam />
+        <hr />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <hr />
+        <h1>fetch, events</h1>
+        <Posts_static />
+        <br />
+        <Posts_API />
+        <br />
+        <Products />
+        <br />
+        <hr />
       </div>
     </>
   );

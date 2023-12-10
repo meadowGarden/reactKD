@@ -24,6 +24,7 @@ const NavbarMK1 = () => {
           <Nav.Link href="/products_from_class">4.3</Nav.Link>
           <Nav.Link href="/icecream">iceCream</Nav.Link>
           <Nav.Link href="/bankcard">bankCard</Nav.Link>
+          <Nav.Link href="/robotselector">robots</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

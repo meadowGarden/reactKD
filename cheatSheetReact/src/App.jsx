@@ -19,6 +19,7 @@ import NavbarMK1 from "./site/NavbarMK1"
 import PageNotFound from "./site/PageNotFound";
 import IceCreamStand from "./nd_iceCream/IceCreamStand";
 import BankCard from "./nd_bankCard/BankCard";
+import RobotSelector from "./nd_robots/RobotSelector";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
 
         <Route path="/icecream" element={<IceCreamStand />} />
         <Route path="/bankcard" element={<BankCard />} />
+        <Route path="/robotselector" element={<RobotSelector />} />
 
         <Route path="/*" element={<PageNotFound />} />
       </Routes>

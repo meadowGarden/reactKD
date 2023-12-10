@@ -18,6 +18,7 @@ import Homepage from "./site/Homepage";
 import NavbarMK1 from "./site/NavbarMK1"
 import PageNotFound from "./site/PageNotFound";
 import IceCreamStand from "./nd_iceCream/IceCreamStand";
+import BankCard from "./nd_bankCard/BankCard";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/products_from_class" element={<Products />} />
 
         <Route path="/icecream" element={<IceCreamStand />} />
+        <Route path="/bankcard" element={<BankCard />} />
 
         <Route path="/*" element={<PageNotFound />} />
       </Routes>

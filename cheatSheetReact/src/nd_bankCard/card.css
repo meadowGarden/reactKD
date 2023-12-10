@@ -1,0 +1,50 @@
+.cardContainer {
+    background-color: #8ED0F5;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 70%;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+.innerFormContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+}
+
+.formElement{
+    margin: 0.1rem;
+}
+
+.paymentButton {
+    background-color: #FF98C4;
+    border-color: #2D6580;
+    border-width: 0.2rem;
+    border-radius: 0.5rem;
+    width: 50%;
+    padding: 0.5rem;
+}
+
+.paymentInfo {
+    text-align: center;
+    background-color: #ceebf9;
+    width: 50%;
+}
+
+.title {
+    text-align: center;
+    color: #ffffff;
+    background-color: #4874C7;
+    padding: 1.5rem;
+    margin: 0;
+}
+
+
+

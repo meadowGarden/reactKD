@@ -1,0 +1,40 @@
+.itemsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  justify-items: center;
+  text-align: center;
+  margin: 2rem;
+}
+
+.cartContainer {
+  padding: 2rem 0rem 0rem 5rem;
+  list-style: none;
+}
+
+
+@media screen and (max-width: 1280px) {
+  .itemsContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .itemsContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .itemsContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .itemsContainer {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -20,6 +20,8 @@ import PageNotFound from "./site/PageNotFound";
 import IceCreamStand from "./nd_iceCream/IceCreamStand";
 import BankCard from "./nd_bankCard/BankCard";
 import RobotSelector from "./nd_robots/RobotSelector";
+import FoodCart from "./nd_foodCart/FoodCart";
+import ItemCart from "./nd_itemCart/ItemCart";
 
 function App() {
   return (
@@ -46,6 +48,9 @@ function App() {
         <Route path="/products_from_class" element={<Products />} />
 
         <Route path="/icecream" element={<IceCreamStand />} />
+        <Route path="/foodcart" element={<FoodCart />} />
+        <Route path="/itemcart" element={<ItemCart />} />
+
         <Route path="/bankcard" element={<BankCard />} />
         <Route path="/robotselector" element={<RobotSelector />} />
 

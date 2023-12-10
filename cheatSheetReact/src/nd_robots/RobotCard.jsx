@@ -8,7 +8,6 @@ const RobotCard = ({
   input,
   makeReservation,
   isReserved,
-  setIsReserved,
 }) => {
   const [isVisible, setIsVisible] = useState(true);
   const { name, username, email, avatar, reserved } = robot;

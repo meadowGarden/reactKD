@@ -22,7 +22,6 @@ const RobotSelector = () => {
       input={inputValue}
       makeReservation={makeReservation}
       isReserved={isReserved}
-      setIsReserved={setIsReserved}
     />
   ));
 

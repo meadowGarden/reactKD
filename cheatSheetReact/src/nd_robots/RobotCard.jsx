@@ -3,32 +3,14 @@ import "./robots.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-const RobotCard = ({
-  robot,
-  input,
-  makeReservation,
-  isReserved,
-}) => {
-  const [isVisible, setIsVisible] = useState(true);
+const RobotCard = ({ robot, reservation, isVisible }) => {
   const { name, username, email, avatar, reserved } = robot;
-
-  const handleVisibility = () => {
-    console.log("name of robot", name);
-    console.log(name.includes(input));
-
-    // if (name.includes(input)) {
-    //   setIsVisible(true);
-    // } else {
-    //   setIsVisible(false);
-    // }
-  };
-  handleVisibility();
 
   return (
     <>
       {isVisible && (
         <Card
-          className={isReserved ? "robotCardReserved" : "robotCard"}
+          className={reserved ? "robotCardReserved" : "robotCard"}
           style={{ width: "18rem" }}
         >
           <Card.Img className="avatarStyle" variant="top" src={avatar} />
@@ -36,11 +18,11 @@ const RobotCard = ({
             <Card.Title>{name}</Card.Title>
             <Card.Text>{email}</Card.Text>
             <Button
-              onClick={() => makeReservation(robot)}
-              className="reserveButton"
+              onClick={() => reservation(robot)}
+              className={reserved ? "reserveButtonReserved" : "reserveButton"}
               variant="primary"
             >
-              {isReserved ? "reserved" : "reserve"}
+              {reserved ? "reserved" : "reserve"}
             </Button>
           </Card.Body>
         </Card>

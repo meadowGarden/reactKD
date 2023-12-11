@@ -5,23 +5,26 @@ import RobotSelectorHeading from "./RobotSelectorHeading";
 import { useState } from "react";
 
 const RobotSelector = () => {
+  const [list, setList] = useState([...robots]);
   const [isVisible, setIsVisible] = useState(true);
   const [inputValue, setInputValue] = useState("");
-  const [isReserved, setIsReserved] = useState(false);
 
-  const makeReservation = (robot) => {
-    setIsReserved(true);
+  const changeReservatioStatus = (robot) => {
+    const updatedArr = list.map((robotIn) => {
+      if (robotIn.id === robot?.id) {
+        return { ...robotIn, reserved: (robotIn.reserved === true) ? false : true };
+      }
+      return robotIn;
+    });
+    setList([...updatedArr]);
   };
 
-  const robotsToDisplay = robots.map((robot) => (
+  const robotsToDisplay = list.map((robot) => (
     <RobotCard
       key={robot.id}
       robot={robot}
+      reservation={changeReservatioStatus}
       isVisible={isVisible}
-      setIsVisible={setIsVisible}
-      input={inputValue}
-      makeReservation={makeReservation}
-      isReserved={isReserved}
     />
   ));
 

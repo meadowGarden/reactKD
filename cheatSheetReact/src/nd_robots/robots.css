@@ -15,6 +15,11 @@
 }
 
 .reserveButton {
+  background-color: #004403;
+  border: none;
+}
+
+.reserveButtonReserved {
   background-color: #951657;
   border: none;
 }
@@ -24,11 +29,13 @@
 }
 
 .robotCard {
-  background-color: #d74c94;
+  color: #951657;
+  background-color: #66E4A3;
 }
 
 .robotCardReserved {
-  background-color: grey;
+  color: #165794;
+  background-color: #808080;
 }
 
 .avatarStyle {

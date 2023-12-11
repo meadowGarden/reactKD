@@ -29,6 +29,31 @@ const ItemCart = () => {
     return <div>data is loading, please wait...</div>;
   }
 
+  // const handleCartListAdd = (product) => {
+  //   const item = cartList.reduce((accumulator, curValue) => {
+  //     if (accumulator.id === product?.id) {
+  //       return {
+  //         ...curValue,
+  //         id: product?.id,
+  //         title: product?.title,
+  //         sum: curValue.sum + product?.price,
+  //       };
+  //     } else {
+  //       return {
+  //         ...curValue,
+  //         id: product?.id,
+  //         title: product?.title,
+  //         sum: product?.price,
+  //       };
+  //     }
+  //   }, {});
+  //   if (cartList.includes((itemInList) => itemInList?.id === item.id)) {
+  //     setCartList([...cartList]);
+  //   } else {
+  //     setCartList([...cartList, item]);
+  //   }
+  // };
+
   const handleCartListAdd = (product) => {
     const updatedArr = cartList.map((productIn) => {
       if (productIn.id === product?.id) {
@@ -49,7 +74,7 @@ const ItemCart = () => {
     });
     setCartList([...updatedArr]);
   };
-  console.log("list -> ", cartList);
+  console.log("cartlist -> ", cartList);
 
   const itemsToDisplay = productArr.map((item) => {
     return (

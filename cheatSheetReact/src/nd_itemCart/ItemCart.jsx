@@ -7,13 +7,7 @@ import axios from "axios";
 const ItemCart = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [productArr, setProductArr] = useState([]);
-  const [cartList, setCartList] = useState([
-    {
-      id: "",
-      title: "",
-      sum: 0,
-    },
-  ]);
+  const [cartList, setCartList] = useState([]);
 
   useEffect(() => {
     axios
@@ -29,52 +23,38 @@ const ItemCart = () => {
     return <div>data is loading, please wait...</div>;
   }
 
-  // const handleCartListAdd = (product) => {
-  //   const item = cartList.reduce((accumulator, curValue) => {
-  //     if (accumulator.id === product?.id) {
-  //       return {
-  //         ...curValue,
-  //         id: product?.id,
-  //         title: product?.title,
-  //         sum: curValue.sum + product?.price,
-  //       };
-  //     } else {
-  //       return {
-  //         ...curValue,
-  //         id: product?.id,
-  //         title: product?.title,
-  //         sum: product?.price,
-  //       };
-  //     }
-  //   }, {});
-  //   if (cartList.includes((itemInList) => itemInList?.id === item.id)) {
-  //     setCartList([...cartList]);
-  //   } else {
-  //     setCartList([...cartList, item]);
-  //   }
-  // };
+  const handleCartListAdd = (addedProduct) => {
+    if (cartList.find((product) => product.id === addedProduct.id)) {
+      const updatedArr = cartList.map((productIn) => {
+        if (productIn.id === addedProduct?.id) {
+          return {
+            id: productIn?.id,
+            title: productIn?.title,
+            sum: productIn.sum + addedProduct?.price,
+          };
+        } else {
+          return {
+            id: productIn?.id,
+            title: productIn?.title,
+            sum: productIn.sum,
+          };
+        }
+      });
 
-  const handleCartListAdd = (product) => {
-    const updatedArr = cartList.map((productIn) => {
-      if (productIn.id === product?.id) {
-        return {
-          ...productIn,
-          id: product?.id,
-          title: product?.title,
-          sum: productIn.sum + product?.price,
-        };
-      } else {
-        return {
-          ...productIn,
-          id: product?.id,
-          title: product?.title,
-          sum: product?.price,
-        };
-      }
-    });
-    setCartList([...updatedArr]);
+      console.log("updated", updatedArr);
+      setCartList([...updatedArr]);
+      return;
+    } else {
+      const product = {
+        id: addedProduct?.id,
+        title: addedProduct?.title,
+        sum: addedProduct?.price,
+      };
+
+      setCartList([...cartList, product]);
+      return;
+    }
   };
-  console.log("cartlist -> ", cartList);
 
   const itemsToDisplay = productArr.map((item) => {
     return (
@@ -106,28 +86,3 @@ const ItemCart = () => {
 };
 
 export default ItemCart;
-
-// const handleCartListAdd = (product) => {
-//   const updatedArr = cartList.map((productIn) => {
-//     const isInList = productIn.id === product?.id;
-//     if (isInList) {
-//       return {
-//         ...productIn,
-//         id: product?.id,
-//         title: product?.title,
-//         sum: productIn.sum + product?.price,
-//       };
-//     } else if (!isInList) {
-//       return {
-//         ...productIn,
-//         id: product?.id,
-//         title: product?.title,
-//         sum: product?.price,
-//       };
-//     }
-//     return productIn;
-//   });
-
-//   setCartList([...updatedArr]);
-// };
-// console.log("list -> ", cartList);

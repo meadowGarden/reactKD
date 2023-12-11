@@ -30,12 +30,12 @@
 
 .robotCard {
   color: #951657;
-  background-color: #66E4A3;
+  background-color: #66e4a3 !important;
 }
 
 .robotCardReserved {
   color: #165794;
-  background-color: #808080;
+  background-color: #808080 !important;
 }
 
 .avatarStyle {
@@ -43,7 +43,6 @@
   align-self: center;
   margin: 0.7rem;
 }
-
 
 .headerTitleStyle {
   text-align: center;

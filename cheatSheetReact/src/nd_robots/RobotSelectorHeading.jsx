@@ -1,10 +1,12 @@
 import "./robots.css";
 
-const RobotSelectorHeading = ({setInput }) => {
+const RobotSelectorHeading = ({ setInput }) => {
   const handleChange = (event) => {
     setInput(event.target.value);
+
     // console.log("value in heading", event.target.value);
   };
+
 
   return (
     <>

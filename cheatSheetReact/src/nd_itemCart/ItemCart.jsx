@@ -56,6 +56,8 @@ const ItemCart = () => {
     }
   };
 
+  const totalSum = cartList.reduce((a, c) => a + c.sum, 0);
+
   const itemsToDisplay = productArr.map((item) => {
     return (
       <ItemCard
@@ -76,7 +78,7 @@ const ItemCart = () => {
         <h3>cartlist</h3>
         <div>{displayCartList}</div>
         <div>
-          <h3 className="cartSum">{`total sum -> ???`}</h3>
+          <h3 className="cartSum">{`total sum -> ${totalSum}`}</h3>
         </div>
       </div>
 

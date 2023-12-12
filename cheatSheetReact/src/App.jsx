@@ -22,6 +22,7 @@ import BankCard from "./nd_bankCard/BankCard";
 import RobotSelector from "./nd_robots/RobotSelector";
 import FoodCart from "./nd_foodCart/FoodCart";
 import ItemCart from "./nd_itemCart/ItemCart";
+import FormSample from "./form/FormSample";
 
 function App() {
   return (
@@ -46,6 +47,8 @@ function App() {
         <Route path="/posts_static" element={<Posts_static />} />
         <Route path="/posts_api" element={<Posts_API />} />
         <Route path="/products_from_class" element={<Products />} />
+
+        <Route path="/formsample" element={<FormSample/>} />
 
         <Route path="/icecream" element={<IceCreamStand />} />
         <Route path="/foodcart" element={<FoodCart />} />

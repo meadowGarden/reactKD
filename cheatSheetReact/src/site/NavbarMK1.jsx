@@ -20,6 +20,7 @@ const NavbarMK1 = () => {
           <Nav.Link href="/posts_static">4.1</Nav.Link>
           <Nav.Link href="/posts_api">4.2</Nav.Link>
           <Nav.Link href="/products_from_class">4.3</Nav.Link>
+          <Nav.Link href="/formsample">form</Nav.Link>
           <Nav.Link href="/icecream">iceCream</Nav.Link>
           <Nav.Link href="/foodcart">foodCart</Nav.Link>
           <Nav.Link href="/itemcart">itemCart</Nav.Link>

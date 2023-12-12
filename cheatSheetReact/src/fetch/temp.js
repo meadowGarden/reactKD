@@ -41,4 +41,23 @@
 // }, [someProp, someState]);
 
 
+// const ComponentToTest = () => {
+//   return (
+//     <div>
+//       <h1 data-testId="component-title">titulinis testavimui</h1>
+//     </div>
+//   );
+// };
+
+// export default ComponentToTest;
+
+
+// import { render, screen } from "@testing-library/react";
+// import ComponentToTest from "../ComponentToTest";
+
+// test("testing if header is present", () => {
+//     render (<ComponentToTest/>);
+//     const title = screen.getByTestId("component-title");
+//     expect(title).toBeInTheDocument();
+// });
 
